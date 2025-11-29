@@ -1,8 +1,7 @@
 # TikTok 风格内容聚合应用
 
-一个仿 TikTok/小红书风格的内容发现平台 Android 应用，采用双列瀑布流布局，支持下拉刷新和上拉加载更多功能。
-
-## 📱 项目简介
+一个仿 TikTok风格的内容发现平台 Android 应用
+##  项目简介
 
 本项目是一个内容聚合类 Android 应用，实现了类似 TikTok 和小红书的内容展示界面。主要特点包括：
 
@@ -11,8 +10,12 @@
 - **上拉加载更多**：自动检测滚动到底部并加载更多内容
 - **点赞交互**：支持点击切换点赞状态，实时更新点赞计数
 - **数据配置管理**：支持 Mock 数据模拟和网络图片资源配置
+- **开发语言**：Java
+- **最低 SDK**：24 (Android 7.0)
+- **目标 SDK**：36
+- **主要依赖**：AppCompat、Material Design、ConstraintLayout、RecyclerView
 
-## ✨ 功能特性
+##  功能特性
 
 ### 核心功能
 
@@ -22,54 +25,8 @@
 4. **点赞功能** - 点击切换点赞状态，实时更新计数，格式化显示（K/W单位）
 5. **数据管理** - Mock数据生成器、数据配置管理、网络图片URL配置
 
-### UI 组件
 
-- 顶部导航栏（标签页、搜索栏、通知徽章）
-- 内容卡片（图片、标题、用户头像、用户名、点赞数）
-- 底部导航栏（首页、朋友、添加、消息、我）
-- 刷新头部和加载更多指示器
-
-## 🛠️ 技术栈
-
-- **开发语言**：Java
-- **最低 SDK**：24 (Android 7.0)
-- **目标 SDK**：36
-- **主要依赖**：AppCompat、Material Design、ConstraintLayout、RecyclerView
-
-## 📁 项目结构
-
-```
-app/src/main/
-├── java/com/example/myapplication/
-│   ├── MainActivity.java              # 主Activity
-│   ├── ContentItem.java               # 数据模型
-│   ├── ContentAdapter.java            # RecyclerView适配器
-│   ├── DataConfig.java                # 数据配置管理
-│   ├── MockDataGenerator.java         # Mock数据生成器
-│   └── DataManager.java               # 数据管理器
-│
-└── res/
-    ├── layout/                        # 布局文件
-    ├── drawable/                      # 图标和drawable资源
-    └── values/                         # 颜色、尺寸、字符串等资源
-```
-
-## 🚀 快速开始
-
-### 环境要求
-
-- Android Studio Hedgehog | 2023.1.1+
-- JDK 11+
-- Android SDK 24+
-
-### 安装步骤
-
-1. 克隆项目：`git clone <repository-url>`
-2. 使用 Android Studio 打开项目
-3. 等待 Gradle 同步完成
-4. 运行项目（连接设备或启动模拟器）
-
-## 📖 使用说明
+##  使用说明
 
 ### 基本操作
 
@@ -79,7 +36,7 @@ app/src/main/
 - **点赞**：点击点赞图标切换状态
 - **标签切换**：点击顶部标签切换内容分类
 
-## 🔧 配置修改
+##  配置修改
 
 ### 修改 Mock 数据
 
@@ -204,22 +161,9 @@ String[] refreshUsernames = {
 3. 重新编译（Build -> Rebuild Project）
 4. 运行应用查看效果
 
-## 🏗️ 架构设计
 
-### 数据层
 
-- **ContentItem**：数据模型（标题、内容、用户信息、图片URL等）
-- **DataConfig**：数据配置类（Mock数据配置、图片URL配置）
-- **MockDataGenerator**：Mock数据生成器
-- **DataManager**：数据管理器（单例，统一管理数据）
-
-### UI层
-
-- **MainActivity**：主Activity，管理UI逻辑和用户交互
-- **ContentAdapter**：RecyclerView适配器
-- **布局文件**：XML布局文件
-
-## 📝 开发说明
+##  开发说明
 
 ### 扩展网络图片加载
 
@@ -245,31 +189,12 @@ String[] refreshUsernames = {
 1. 创建 API 接口
 2. 在 `DataManager` 中调用 API 替换 Mock 数据生成
 
-## 🐛 已知问题
+##  已知问题
 
 1. 网络图片加载：当前使用占位符，需要添加图片加载库才能显示真实图片
 2. 下拉刷新：在某些设备上可能需要调整阈值
 3. 数据持久化：当前数据不持久化，应用重启后重置
 
-## 🔮 未来计划
-
-- [ ] 集成图片加载库（Glide/Picasso）
-- [ ] 添加数据持久化（Room数据库）
-- [ ] 实现真实API接口
-- [ ] 添加内容详情页
-- [ ] 优化性能和内存使用
-
-## 📄 许可证
-
-本项目仅供学习和参考使用。
-
-## 👥 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-## 📞 联系方式
-
-如有问题或建议，请通过 Issue 反馈。
 
 ---
 
