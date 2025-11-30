@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         contentAdapter = new ContentAdapter(contentItems);
         contentRecyclerView.setAdapter(contentAdapter);
     }
-    
+    //自定义下拉刷新
     /**
      * 设置下拉刷新（自定义实现，不依赖SwipeRefreshLayout）
      */
