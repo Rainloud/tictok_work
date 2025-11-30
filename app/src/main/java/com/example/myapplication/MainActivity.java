@@ -1,11 +1,11 @@
 package com.example.myapplication;
 
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -20,7 +20,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -128,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         tabGroup.setOnClickListener(tabClickListener);
     }
 
-
+//瀑布流布局
     private void setupRecyclerView() {
         // 使用2列瀑布流布局，支持动态高度
         layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
@@ -147,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 设置下拉刷新（自定义实现，不依赖SwipeRefreshLayout）
      */
+    @SuppressLint("ClickableViewAccessibility")
     private void setupPullToRefresh() {
         // 使用触摸事件检测下拉手势
         contentRecyclerView.setOnTouchListener((v, event) -> {
